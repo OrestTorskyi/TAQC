@@ -10,7 +10,8 @@ public class Person {
     private int birthYear;
     private String address;
     private int age;
-    private int count = 0;
+    private static int count = 0;
+    private int person_number;
 
 
 
@@ -19,7 +20,7 @@ public class Person {
         count++;
     }
 
-    public Person(String name, int birthYear)
+    public Person(String name, int birthYear, String address)
     {
         this.name = name;
         this.birthYear = birthYear;
@@ -55,9 +56,11 @@ public class Person {
         return count;
     }
 
-    public void calculateYears()
+    public int setNumber() {return person_number = count;}
+
+    public int calculateYears()
     {
-        System.out.println("Your age is: " + (2021 - birthYear));
+        return age = 2021 - birthYear ;
     }
 
     //?????
@@ -87,11 +90,11 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Person №" + count +
+        return "Person №" + person_number +
                 "\nName = " + name  +
                 "\nBirthYear = " + birthYear +
                 "\nAddress = " + address +
-                "\nAge = " + age;
+                "\nAge = " + calculateYears() + "\n";
     }
 
 
