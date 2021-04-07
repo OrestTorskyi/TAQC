@@ -1,18 +1,17 @@
 package obj;
 
-public class Eagle extends FlyingBird {
+public class Chicken extends NonFlyingBird {
 
-
-
-    public Eagle()
+    public Chicken()
     {
         count++;
         id = count;
     }
 
+
     @Override
     public String toString() {
-        return "Bird: Eagle" +
+        return "Bird: Chicken" +
                 "\nFeathers: " + feathers +
                 "\nLayEggs: " + layEggs +
                 "\nID: " + id;

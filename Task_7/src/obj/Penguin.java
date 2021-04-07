@@ -1,18 +1,22 @@
 package obj;
 
-public class Eagle extends FlyingBird {
+public class Penguin extends NonFlyingBird{
 
-
-
-    public Eagle()
+    public Penguin()
     {
         count++;
         id = count;
     }
 
     @Override
+    public void fly()
+    {
+        System.out.println("This species can't fly, but can swim!");
+    }
+
+    @Override
     public String toString() {
-        return "Bird: Eagle" +
+        return "Bird: Penguin" +
                 "\nFeathers: " + feathers +
                 "\nLayEggs: " + layEggs +
                 "\nID: " + id;
