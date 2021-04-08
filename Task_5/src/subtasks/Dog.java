@@ -46,18 +46,7 @@ public class Dog {
         return name;
     }
 
-    @Override
-    public boolean equals(Object o)
-    {
-        if(this == o) return true;
-        if((o == null) | this.getClass() != o.getClass()) return false;
-        if(this.hashCode() == o.hashCode()) return true;
-        else {
-            Dog otherDog = (Dog) o;
-            if (this.name == otherDog.name) return true;
-            else return false;
-        }
-    }
+
 
     public static void hasSameName(Dog[] dogs)
     {
@@ -92,6 +81,19 @@ public class Dog {
       return oldest_dog;
     }
 
+
+    @Override
+    public boolean equals(Object o)
+    {
+        if(this == o) return true;
+        if((o == null) | this.getClass() != o.getClass()) return false;
+        if(this.hashCode() == o.hashCode()) return true;
+        else {
+            Dog otherDog = (Dog) o;
+            if (this.name == otherDog.name) return true;
+            else return false;
+        }
+    }
 
     @Override
     public int hashCode() {
